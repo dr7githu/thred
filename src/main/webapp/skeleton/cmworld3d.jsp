@@ -24,7 +24,7 @@ html, body {
 <script src="./cmworld3/lib/jquery-2.2.0.min.js"></script>
 <script src="./cmworld3/cm_compile.js"></script>
 <script>
-	CMWORLD.CmCompile.includeCmWorld3Library("./cmworld3/");
+	CMWORLD.Compile.includeCm3Library("./cmworld3/");
 </script>
 
 <script>
