@@ -33,37 +33,34 @@ html, body {
 
 
 <script>
-        var cmworld;
-        var gui;
-        var redmat;
-        var whitemat;
-        var userLayer;
-        var path;
-        var starttime;
-        var ppp = 0;
-        var droneobj;
-        var cubes = [];
-        var rollOverMesh, rollOverMaterial;
-        var cubeGeo, cubeMaterial;
-        var axis = new THREE.Vector3();
-        var up = new THREE.Vector3(0, 1, 0);
-        var radians;
-        var isFly = false;
+	var cmworld;
+	var gui;
+	var redmat;
+	var whitemat;
+	var userLayer;
+	var path;
+	var starttime;
+	var ppp = 0;
+	var droneobj;
+	var cubes = [];
+	var rollOverMesh, rollOverMaterial;
+	var cubeGeo, cubeMaterial;
+	var axis = new THREE.Vector3();
+	var up = new THREE.Vector3(0, 1, 0);
+	var radians;
+	var isFly = false;
 
 
-       // 드론을 따라 움직이는 카메라
-       // 드론을 따라 갈때는 마우스가 동작하지 않는다.
-       //
-        function fly()
-        {
-           isFly = true;
-        }
-
-       // 드론을 따라가는 걸 멈춘다.
-        function stopFly()
-        {
-           isFly = false;
-        }
+	// 드론을 따라 움직이는 카메라
+	// 드론을 따라 갈때는 마우스가 동작하지 않는다.
+	 function fly() {
+	    isFly = true;
+	 }
+	
+	// 드론을 따라가는 걸 멈춘다.
+	 function stopFly() {
+	    isFly = false;
+	 }
 
         function onupdatedrone(userObject, deltatime) {
            var pos = path.getPoint(ppp);
@@ -303,7 +300,7 @@ html, body {
 
 
             var loader = new THREE.OBJMTLLoader();
-           loader.load("./model/Drone-MQ27/MQ-27.obj", "./model/Drone-MQ27/MQ-27.mtl", onloaddrone);
+           loader.load("./cmworld3/model/Drone-MQ27/MQ-27.obj", "./cmworld3/model/Drone-MQ27/MQ-27.mtl", onloaddrone);
            // loader.load("./model/Drone_Red/Drone_Red.obj", "./model/Drone_Red/Drone_Red.mtl", onloaddrone);
         }
 
