@@ -34,4 +34,28 @@
 	<definition name="nifty/*/*/*/*/*" extends="ContentsLayout">
 		<put-attribute name="contents" value="/WEB-INF/jsp/nifty/{1}/{2}/{3}/{4}/{5}.jsp" />
 	</definition>
+	
+	
+
+	<definition name="egovframework/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}.jsp" />
+	</definition>
+
+	<definition name="egovframework/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="egovframework/*/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="egovframework/*/*/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+
+	<definition name="egovframework/*/*/*/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}/{2}/{3}/{4}/{5}.jsp" />
+	</definition>
+	
+	
 </tiles-definitions>
