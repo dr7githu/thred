@@ -8,9 +8,9 @@
 		<!--================================-->
 		<div class="navbar-header">
 			<a href="/nifty/demo/widget.do" class="navbar-brand">
-				<img src="/images/comm/3d_64px.png" alt="Nifty Logo" class="brand-icon">
+				<img src="/images/comm/3d_64px.png" alt="3D Grid system" class="brand-icon">
 				<div class="brand-title">
-					<span class="brand-text">3D Grid</span>
+					<span class="brand-text">3 DimentionS</span>
 				</div>
 			</a>
 		</div>

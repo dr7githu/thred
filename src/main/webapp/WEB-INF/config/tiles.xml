@@ -3,6 +3,13 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 	
 <tiles-definitions>
+	<definition name="SingleLayout" template="/WEB-INF/jsp/layout/single_layout.jsp"></definition>
+	
+	<definition name="egovframework/com/uat/uia/*" extends="SingleLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/com/uat/uia/{1}.jsp" />
+	</definition>
+	<!-- End of CPMS Egov Login -->
+	
 	
 	<definition name="bootGovHello" template="/WEB-INF/jsp/layout/TilesHello.jsp">
 		<put-attribute name="title"		value="TILES 3.0.3 HELLO" />

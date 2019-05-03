@@ -17,8 +17,8 @@
 					<a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
 						<span class="pull-right dropdown-toggle"> <i class="dropdown-caret"></i>
 						</span>
-						<p class="mnp-name">Dev2 Cheif</p>
-						<span class="mnp-desc">aaron.cha@themeon.net</span>
+						<p class="mnp-name">${loginVO.name}</p>
+						<span class="mnp-desc">${loginVO.email}</span>
 					</a>
 				</div>
 				<div id="profile-nav" class="collapse list-group bg-trans">
