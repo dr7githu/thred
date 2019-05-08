@@ -32,6 +32,8 @@
 
 <title><tiles:insertAttribute name="title" ignore="true"/></title>
 
+<link rel="shortcut icon" href="/images/comm/3d_16px.png">
+
 <!-- Font -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin">
 

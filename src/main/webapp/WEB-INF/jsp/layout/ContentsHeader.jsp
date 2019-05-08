@@ -1,4 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="egovframework.com.cmm.service.EgovProperties"%>
+<%@ page import="egovframework.com.cmm.LoginVO"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="validator" uri="http://www.springmodules.org/tags/commons-validator"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!--NAVBAR-->
 <!--===================================================-->
 <header id="navbar">
@@ -282,9 +291,11 @@
 							<li><a href="#">
 									<i class="demo-pli-computer-secure icon-lg icon-fw"></i> Lock screen
 								</a></li>
-							<li><a href="pages-login.html">
-									<i class="demo-pli-unlock icon-lg icon-fw"></i> Logout
-								</a></li>
+							<li>
+								<a href="${pageContext.request.contextPath }/uat/uia/actionLogout.do">
+									<i class="demo-pli-unlock icon-lg icon-fw"></i> <spring:message code="comCmm.unitContent.3"/>
+								</a>
+							</li>
 						</ul>
 					</div></li>
 				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
