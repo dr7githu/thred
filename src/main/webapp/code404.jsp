@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="egovframework.com.cmm.service.EgovProperties"%>
 <%@ page import="egovframework.com.cmm.LoginVO"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="validator"
-	uri="http://www.springmodules.org/tags/commons-validator"%>
+<%@ taglib prefix="validator" uri="http://www.springmodules.org/tags/commons-validator"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -21,8 +19,7 @@
 	String bootstrapNfittyDemoPluginsFontAwesomeCss = EgovProperties
 			.getProperty("bootstrap.nfitty.demo.plugins.fontawesome.css");
 %>
-<c:set var="bootstrapNfittyHome" scope="session"
-	value="<%=bootstrapNfittyHome%>" />
+<c:set var="bootstrapNfittyHome" scope="session" value="<%=bootstrapNfittyHome%>" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,28 +31,17 @@
 
 
 <!-- IMPORT CSS -->
-<link
-	href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin"
-	rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
 <!--Open Sans Font [ OPTIONAL ] -->
 <link rel="stylesheet" type="text/css" href="<%=bootstrapCss%>">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyCss%>">
-<link rel="stylesheet" type="text/css"
-	href="<%=bootstrapNfittyPaceCss%>">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyPaceCss%>">
 <!--Pace - Page Load Progress Par [OPTIONAL]-->
-<link rel="stylesheet" type="text/css"
-	href="<%=bootstrapNfittyDemoPluginsFontAwesomeCss%>">
-<link rel="stylesheet" type="text/css"
-	href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin">
-<link rel="stylesheet" type="text/css"
-	href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700'
-	rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css"
-	href="${bootstrapNfittyHome}css/demo/nifty-demo-icons.min.css"
-	rel="stylesheet">
-<link rel="stylesheet" type="text/css"
-	href="${bootstrapNfittyHome}css/demo/nifty-demo.min.css"
-	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyDemoPluginsFontAwesomeCss%>">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin">
+<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="${bootstrapNfittyHome}css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="${bootstrapNfittyHome}css/demo/nifty-demo.min.css" rel="stylesheet">
 <!--Demo [ DEMONSTRATION ]-->
 
 <!-- IMPORT JS -->
@@ -68,12 +54,8 @@
 
 
 <!--Premium Icons [ OPTIONAL ]-->
-<link
-	href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/line-icons/premium-line-icons.min.css"
-	rel="stylesheet">
-<link
-	href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css"
-	rel="stylesheet">
+<link href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
+<link href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css" rel="stylesheet">
 
 <!--Page Load Progress Bar [ OPTIONAL ]-->
 <link href="<%=bootstrapNfittyHome%>css/pace.min.css" rel="stylesheet">
@@ -94,8 +76,7 @@
 		<!--===================================================-->
 		<div class="cls-header">
 			<div class="cls-brand">
-				<a class="box-inline" href="index.html"> <!--<img alt="Nifty Admin" src="img/logo.png" class="brand-icon">-->
-					<span class="brand-title">Nifty<span class="text-thin">Admin</span></span>
+				<a class="box-inline" href="index.html"> <!--<img alt="Nifty Admin" src="img/logo.png" class="brand-icon">--> <span class="brand-title">3 차원 입체 격자 체계<span class="text-thin">Admin</span></span>
 				</a>
 			</div>
 		</div>
@@ -107,16 +88,13 @@
 			<p class="h4 text-uppercase text-bold">Page Not Found!</p>
 			<div class="pad-btm">웹 페이지를 찾을 수 없습니다.</div>
 			<div class="row mar-ver">
-				<form class="col-xs-12 col-sm-10 col-sm-offset-1" method="post"
-					action="pages-search-results.html">
-					<input type="text" placeholder="Search.."
-						class="form-control error-search">
+				<form class="col-xs-12 col-sm-10 col-sm-offset-1" method="post" action="pages-search-results.html">
+					<input type="text" placeholder="Search.." class="form-control error-search">
 				</form>
 			</div>
 			<hr class="new-section-sm bord-no">
 			<div class="pad-top">
-				<a class="btn btn-primary" href="index.html">Return Home</a>
-				<a href="javascript:fncGoAfterErrorPage();">이전 페이지</a>
+				<a class="btn btn-primary" href="index.html">Return Home</a> <a href="javascript:fncGoAfterErrorPage();">이전 페이지</a>
 			</div>
 		</div>
 

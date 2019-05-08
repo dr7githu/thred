@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="egovframework.com.cmm.service.EgovProperties"%>
-<%@ page import="egovframework.com.cmm.LoginVO"  %>
+<%@ page import="egovframework.com.cmm.LoginVO"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="validator" uri="http://www.springmodules.org/tags/commons-validator"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -20,6 +20,7 @@
 	String bootstrapNfittyPaceJs = EgovProperties.getProperty("bootstrap.nfitty.pace.js");
 	String bootstrapNfittyDemoPluginsFontAwesomeCss = EgovProperties.getProperty("bootstrap.nfitty.demo.plugins.fontawesome.css");
 %>
+
 <c:set var="bootstrapNfittyHome" scope="session" value="<%=bootstrapNfittyHome%>" />
 
 <!DOCTYPE HTML>
@@ -28,25 +29,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
+
+<!-- Font -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin">
 
 <!-- IMPORT CSS -->
 <link rel="stylesheet" type="text/css" href="<%=bootstrapCss%>">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyCss%>">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyPaceCss%>">
-<!--Pace - Page Load Progress Par [OPTIONAL]-->
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyDemoPluginsFontAwesomeCss%>">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin">
-<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="${bootstrapNfittyHome}css/demo/nifty-demo-icons.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="${bootstrapNfittyHome}css/demo/nifty-demo.min.css" rel="stylesheet">
-<!--Demo [ DEMONSTRATION ]-->
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>css/demo/nifty-demo-icons.min.css">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>css/demo/nifty-demo.min.css">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/line-icons/premium-line-icons.min.css">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css">
 
 <!-- IMPORT JS -->
 <script type="text/javascript" src="<%=jqueryJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyPaceJs%>"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/nifty-demo.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/morris.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/raphael-js/raphael.min.js"></script>
+
 <!--Pace - Page Load Progress Par [OPTIONAL]-->
 <script type="text/javascript">
 	var bootstrapNfittyHome = "<%=bootstrapNfittyHome%>";
@@ -60,8 +67,7 @@
 		<!--Brand logo & name-->
 		<!--================================-->
 		<div class="navbar-header">
-			<a href="index.html" class="navbar-brand">
-				<img src="${bootstrapNfittyHome}img/logo.png" alt="Nifty Logo" class="brand-icon">
+			<a href="index.html" class="navbar-brand"> <img src="${bootstrapNfittyHome}img/logo.png" alt="Nifty Logo" class="brand-icon">
 				<div class="brand-title">
 					<span class="brand-text">Nifty</span>
 				</div>
@@ -74,8 +80,8 @@
 
 		<div class="boxed">
 			<!--CONTENT CONTAINER-->
-            <!--===================================================-->
-            <div id="content-container">
+			<!--===================================================-->
+			<div id="content-container">
 				<div id="page-head">
 
 					<!--Page Title-->
@@ -90,9 +96,8 @@
 					<!--Breadcrumb-->
 					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 					<ol class="breadcrumb">
-						<li><a href="#">
-								<i class="demo-pli-home"></i>
-							</a></li>
+						<li><a href="#"> <i class="demo-pli-home"></i>
+						</a></li>
 						<li class="active">Lv1</li>
 						<li class="active">Lv2</li>
 					</ol>
@@ -110,8 +115,8 @@
 				<!--===================================================-->
 				<!--End page content-->
 			</div>
-            <!--===================================================-->
-            <!--END CONTENT CONTAINER-->
+			<!--===================================================-->
+			<!--END CONTENT CONTAINER-->
 
 			<!-- ASIDE -->
 			<!--===================================================-->
@@ -156,9 +161,9 @@
 	<!--===================================================-->
 	<!-- END OF CONTAINER -->
 
-    
-    <!--Demo script [ DEMONSTRATION ]-->
-    <script type="text/javascript" src="${bootstrapNfittyHome}js/demo/nifty-demo.min.js"></script>
+
+	<!--Demo script [ DEMONSTRATION ]-->
+	<script type="text/javascript" src="${bootstrapNfittyHome}js/demo/nifty-demo.min.js"></script>
 
 	<!--Flot Chart [ OPTIONAL ]-->
 	<script type="text/javascript" src="${bootstrapNfittyHome}plugins/flot-charts/jquery.flot.min.js"></script>

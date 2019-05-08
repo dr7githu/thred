@@ -7,14 +7,19 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MolitIntro {
+public class ThredIntro {
 	
-	private final static Logger logger = LoggerFactory.getLogger(MolitIntro.class);
+	private final static Logger logger = LoggerFactory.getLogger(ThredIntro.class);
 
-	@RequestMapping(value="/molitIntro.do")
-	public String molitIntro(ModelMap map) {
-		
-		logger.info("url molitIntro was called");
-		return "egovframework/com/cmm/EgovUnitMain";
+	@RequestMapping(value="/thredIntro.do")
+	public String ThredIntro(ModelMap map) {
+		logger.info("url Thred Intro was called");
+		return "thred/comm/intro/ThredIntro";
+	}
+	
+	@RequestMapping(value="/thredIndex.do")
+	public String ThredIndex(ModelMap model) {
+		logger.info("url Thred Intro was called");
+		return "forward:/thredIntro.do";
 	}
 }

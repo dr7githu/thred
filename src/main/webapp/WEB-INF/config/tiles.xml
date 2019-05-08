@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
-	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
-	
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
 <tiles-definitions>
-	<definition name="SingleLayout" template="/WEB-INF/jsp/layout/single_layout.jsp"></definition>
-	
+	<definition name="SingleLayout" template="/WEB-INF/jsp/layout/SingleLayout.jsp"></definition>
+
 	<definition name="egovframework/com/uat/uia/*" extends="SingleLayout">
 		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/com/uat/uia/{1}.jsp" />
 	</definition>
-	<!-- End of CPMS Egov Login -->
-	
-	
-	<definition name="bootGovHello" template="/WEB-INF/jsp/layout/TilesHello.jsp">
-		<put-attribute name="title"		value="TILES 3.0.3 HELLO" />
+
+	<definition name="thred/comm/intro/ThredIntro" extends="SingleLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/thred/comm/intro/ThredIntro.jsp" />
 	</definition>
 	
-	<definition name="ContentsLayout" template="/WEB-INF/jsp/layout/layout.jsp">
-		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp"/>
-		<put-attribute name="aside" value="/WEB-INF/jsp/layout/aside.jsp"/>
-		<put-attribute name="menu" value="/WEB-INF/jsp/layout/menu.jsp"/>
-		<put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp"/>
+	<definition name="egovframework/com/uat/uia/EgovLoginUsr" extends="SingleLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/com/uat/uia/EgovLoginUsr.jsp" />
 	</definition>
-	
+
+	<definition name="ContentsLayout" template="/WEB-INF/jsp/layout/ContentsLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/ContentsHeader.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/jsp/layout/ContentsAside.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/CommonMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/ContentsFooter.jsp" />
+	</definition>
+
 	<definition name="nifty/*" extends="ContentsLayout">
 		<put-attribute name="contents" value="/WEB-INF/jsp/nifty/{1}.jsp" />
 	</definition>
@@ -41,8 +42,8 @@
 	<definition name="nifty/*/*/*/*/*" extends="ContentsLayout">
 		<put-attribute name="contents" value="/WEB-INF/jsp/nifty/{1}/{2}/{3}/{4}/{5}.jsp" />
 	</definition>
-	
-	
+
+
 
 	<definition name="egovframework/*" extends="ContentsLayout">
 		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}.jsp" />
@@ -63,6 +64,34 @@
 	<definition name="egovframework/*/*/*/*/*" extends="ContentsLayout">
 		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/{1}/{2}/{3}/{4}/{5}.jsp" />
 	</definition>
-	
-	
+
+
+	<definition name="CollapsedNavigationLayout" template="/WEB-INF/jsp/layout/CollapsedNavigationLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/ContentsHeader.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/jsp/layout/ContentsAside.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/CommonMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/ContentsFooter.jsp" />
+	</definition>
+
+	<definition name="OffcanvasNavigationLayout" template="/WEB-INF/jsp/layout/OffcanvasNavigationLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/ContentsHeader.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/jsp/layout/ContentsAside.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/CommonMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/ContentsFooter.jsp" />
+	</definition>
+
+	<definition name="OffcanvasRevealingNavigationLayout" template="/WEB-INF/jsp/layout/OffcanvasRevealingNavigationLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/ContentsHeader.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/jsp/layout/ContentsAside.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/CommonMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/ContentsFooter.jsp" />
+	</definition>
+
+	<definition name="OffcanvasSlideInNavigationLayout" template="/WEB-INF/jsp/layout/OffcanvasSlideInNavigationLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/ContentsHeader.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/jsp/layout/ContentsAside.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/CommonMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/ContentsFooter.jsp" />
+	</definition>
+
 </tiles-definitions>
