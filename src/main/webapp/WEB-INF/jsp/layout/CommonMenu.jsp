@@ -17,8 +17,8 @@
 					<a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
 						<span class="pull-right dropdown-toggle"> <i class="dropdown-caret"></i>
 						</span>
-						<p class="mnp-name">${loginVO.name}</p>
-						<span class="mnp-desc">${loginVO.email}</span>
+						<p class="mnp-name"><c:out value="${loginVO.name}" /></p>
+						<span class="mnp-desc"><c:out value="${loginVO.email}" /></span>
 					</a>
 				</div>
 				<div id="profile-nav" class="collapse list-group bg-trans">
