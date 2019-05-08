@@ -55,6 +55,12 @@
 <%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/nifty-demo.min.js"></script> --%>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/morris.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/raphael-js/raphael.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.resize.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/skycons/skycons.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/widgets.js"></script>
 
 <!--Pace - Page Load Progress Par [OPTIONAL]-->
 <script type="text/javascript">
@@ -69,9 +75,9 @@
 		<!--Brand logo & name-->
 		<!--================================-->
 		<div class="navbar-header">
-			<a href="index.html" class="navbar-brand"> <img src="${bootstrapNfittyHome}img/logo.png" alt="Nifty Logo" class="brand-icon">
+			<a href="index.html" class="navbar-brand"> <img src="<c:out value='${bootstrapNfittyHome}'/>img/logo.png" alt="3 Dimention S" class="brand-icon">
 				<div class="brand-title">
-					<span class="brand-text">Nifty</span>
+					<span class="brand-text">3 Dimention S</span>
 				</div>
 			</a>
 		</div>
@@ -163,28 +169,5 @@
 	<!--===================================================-->
 	<!-- END OF CONTAINER -->
 
-
-	<!--Demo script [ DEMONSTRATION ]-->
-	<script type="text/javascript" src="${bootstrapNfittyHome}js/demo/nifty-demo.min.js"></script>
-
-	<!--Flot Chart [ OPTIONAL ]-->
-	<script type="text/javascript" src="${bootstrapNfittyHome}plugins/flot-charts/jquery.flot.min.js"></script>
-	<script type="text/javascript" src="${bootstrapNfittyHome}plugins/flot-charts/jquery.flot.resize.min.js"></script>
-
-
-	<!--Gauge js [ OPTIONAL ]-->
-	<script type="text/javascript" src="${bootstrapNfittyHome}plugins/gauge-js/gauge.min.js"></script>
-
-
-	<!--Skycons [ OPTIONAL ]-->
-	<script type="text/javascript" src="${bootstrapNfittyHome}plugins/skycons/skycons.min.js"></script>
-
-
-	<!--Easy Pie Chart [ OPTIONAL ]-->
-	<script type="text/javascript" src="${bootstrapNfittyHome}plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
-
-
-	<!--Widget [ SAMPLE ]-->
-	<script type="text/javascript" src="${bootstrapNfittyHome}js/demo/widgets.js"></script>
 </body>
 </html>
