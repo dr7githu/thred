@@ -149,22 +149,22 @@
 								</p>
 								<div class="row img-gallery">
 									<div class="col-xs-4">
-										<img class="img-responsive" src="${bootstrapNfittyHome}img/thumbs/img-1.jpg" alt="thumbs">
+										<img class="img-responsive" src="<c:out value='${bootstrapNfittyHome}'/>img/thumbs/img-1.jpg" alt="thumbs">
 									</div>
 									<div class="col-xs-4">
-										<img class="img-responsive" src="${bootstrapNfittyHome}img/thumbs/img-3.jpg" alt="thumbs">
+										<img class="img-responsive" src="<c:out value='${bootstrapNfittyHome}'/>img/thumbs/img-3.jpg" alt="thumbs">
 									</div>
 									<div class="col-xs-4">
-										<img class="img-responsive" src="${bootstrapNfittyHome}img/thumbs/img-2.jpg" alt="thumbs">
+										<img class="img-responsive" src="<c:out value='${bootstrapNfittyHome}'/>img/thumbs/img-2.jpg" alt="thumbs">
 									</div>
 									<div class="col-xs-4">
-										<img class="img-responsive" src="${bootstrapNfittyHome}img/thumbs/img-4.jpg" alt="thumbs">
+										<img class="img-responsive" src="<c:out value='${bootstrapNfittyHome}'/>img/thumbs/img-4.jpg" alt="thumbs">
 									</div>
 									<div class="col-xs-4">
-										<img class="img-responsive" src="${bootstrapNfittyHome}img/thumbs/img-6.jpg" alt="thumbs">
+										<img class="img-responsive" src="<c:out value='${bootstrapNfittyHome}'/>img/thumbs/img-6.jpg" alt="thumbs">
 									</div>
 									<div class="col-xs-4">
-										<img class="img-responsive" src="${bootstrapNfittyHome}img/thumbs/img-5.jpg" alt="thumbs">
+										<img class="img-responsive" src="<c:out value='${bootstrapNfittyHome}'/>img/thumbs/img-5.jpg" alt="thumbs">
 									</div>
 								</div>
 								<a href="#" class="btn btn-block btn-primary">Browse Gallery</a>
@@ -228,7 +228,7 @@
 										</a></li>
 									<li><a class="media" href="#">
 											<div class="media-left">
-												<img class="img-circle img-sm" alt="Profile Picture" src="${bootstrapNfittyHome}img/profile-photos/9.png">
+												<img class="img-circle img-sm" alt="Profile Picture" src="<c:out value='${bootstrapNfittyHome}'/>img/profile-photos/9.png">
 											</div>
 											<div class="media-body">
 												<p class="mar-no text-nowrap text-main text-semibold">Lucy sent you a message</p>
@@ -237,7 +237,7 @@
 										</a></li>
 									<li><a class="media" href="#">
 											<div class="media-left">
-												<img class="img-circle img-sm" alt="Profile Picture" src="${bootstrapNfittyHome}img/profile-photos/3.png">
+												<img class="img-circle img-sm" alt="Profile Picture" src="<c:out value='${bootstrapNfittyHome}'/>img/profile-photos/3.png">
 											</div>
 											<div class="media-body">
 												<p class="mar-no text-nowrap text-main text-semibold">Jackson sent you a message</p>
@@ -266,7 +266,7 @@
 						<span class="ic-user pull-right"> 
 							<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
 							<!--You can use an image instead of an icon.--> 
-							<!--<img class="img-circle img-user media-object" src="${bootstrapNfittyHome}img/profile-photos/1.png" alt="Profile Picture">--> 
+							<!--<img class="img-circle img-user media-object" src="<c:out value='${bootstrapNfittyHome}'/>img/profile-photos/1.png" alt="Profile Picture">--> 
 							<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
 							<i class="demo-pli-male"></i>
 						</span>

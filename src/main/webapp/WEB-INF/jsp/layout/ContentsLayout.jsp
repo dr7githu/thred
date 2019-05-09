@@ -48,6 +48,7 @@
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css">
 
 <!-- IMPORT JS -->
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script>
 <script type="text/javascript" src="<%=jqueryJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyJs%>"></script>
@@ -57,16 +58,13 @@
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/raphael-js/raphael.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.resize.min.js"></script>
-<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/skycons/skycons.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/widgets.js"></script>
 
-<!--Pace - Page Load Progress Par [OPTIONAL]-->
 <script type="text/javascript">
 	var bootstrapNfittyHome = "<%=bootstrapNfittyHome%>";
 </script>
-<!--Font Awesome [ OPTIONAL ]-->
 </head>
 <body>
 	<!-- START OF CONTAINER -->

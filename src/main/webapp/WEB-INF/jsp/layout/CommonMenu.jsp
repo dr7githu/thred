@@ -78,28 +78,19 @@
 			<ul id="mainnav-menu" class="list-group">
 
 				<!--Category name-->
-				<li class="list-header">Dev2 Customize</li>
-
-				<!--Menu list item-->
+				<li class="list-header">관리자 메뉴</li>
 				<li><a href="#">
-						<i class="demo-pli-photo-2"></i> <span class="menu-title">Nifty Demo</span> <i class="arrow"></i>
-					</a> <!--Submenu-->
-					<ul class="collapse">
-						<li><a href="<c:url value='/nifty/demo/widget.do'/>">Weget Style</a></li>
-						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">Grid System for Bootstrap</a></li>
-					</ul></li>
-				<li><a href="#">
-						<i class="demo-pli-split-vertical-2"></i> <span class="menu-title">Egov Menu</span> <i class="arrow"></i>
+						<i class="demo-pli-split-vertical-2"></i> <span class="menu-title">관리 기능</span> <i class="arrow"></i>
 					</a> <!--Submenu-->
 					<ul class="collapse">
 						<c:forEach var="result" items="${resultList}" varStatus="status">
 							<c:if test="${isMai == 'false' && result.gid == '0'}">
 								<li>포털(예제) 메인화면</li>
-								<c:set var="isMai" value="true" />
+								<c:set var="isMai" value="false" />
 							</c:if>
 							<c:if test="${isUat == 'false' && result.gid == '10'}">
 								<li>사용자디렉토리/통합인증</li>
-								<c:set var="isUat" value="true" />
+								<c:set var="isUat" value="false" />
 							</c:if>
 							<c:if test="${isSec == 'false' && result.gid == '20'}">
 								<li>보안</li>
@@ -137,10 +128,42 @@
 								<li>외부 추가 컴포넌트</li>
 								<c:set var="isExt" value="true" />
 							</c:if>
-							<a href="${pageContext.request.contextPath}<c:out value="${result.listUrl}"/>" target="_content" class="link">
-								<c:out value="${result.order}" />.<c:out value="${result.name}" />
-							</a>
+							<li><a href="${pageContext.request.contextPath}<c:out value="${result.listUrl}"/>">
+									<c:out value="${result.order}" />.<c:out value="${result.name}" />
+								</a>
+							</li>
 						</c:forEach>
+					</ul></li>
+					
+				<li class="list-divider"></li>
+				
+				<!--Category name-->
+				<li class="list-header">3D 격자 체계 </li>
+
+				<!--Menu list item-->
+				<li><a href="#">
+						<i class="demo-pli-photo-2"></i> <span class="menu-title">파일럿 프로그램 </span> <i class="arrow"></i>
+					</a> <!--Submenu-->
+					<ul class="collapse">
+						<li><a href="<c:url value='/nifty/demo/widget.do'/>">기본</a></li>
+						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">격자 체계</a></li>
+						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">카메라  무빙</a></li>
+						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">데이터 로딩</a></li>
+					</ul></li>
+					
+					
+<%-- 				<li class="list-divider"></li>
+				
+				<!-- CM World -->
+				<li class="list-header">Nifty Demo</li>
+
+				<!--Menu list item-->
+				<li><a href="#">
+						<i class="demo-pli-photo-2"></i> <span class="menu-title">Nifty Demo</span> <i class="arrow"></i>
+					</a> <!--Submenu-->
+					<ul class="collapse">
+						<li><a href="<c:url value='/nifty/demo/widget.do'/>">Weget Style</a></li>
+						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">Grid System for Bootstrap</a></li>
 					</ul></li>
 					
 				<li class="list-divider"></li>
@@ -433,7 +456,7 @@
 				<!--Menu list item-->
 				<li><a href="helper-classes.html">
 						<i class="demo-pli-inbox-full"></i> <span class="menu-title">Helper Classes</span>
-					</a></li>
+					</a></li> --%>
 			</ul>
 
 

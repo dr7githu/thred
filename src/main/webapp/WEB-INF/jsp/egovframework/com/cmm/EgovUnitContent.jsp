@@ -22,64 +22,51 @@
 			<div class="panel panel-body text-center">
 				<div class="panel-heading">
 					<h3>
-						<c:if test="${loginVO != null}">
+						3차원 입체격자체계 기반 국토 통합관리 지원 기술 개발
+						<%-- <c:if test="${loginVO != null}">
 								${loginVO.name }<spring:message code="comCmm.unitContent.2" />
 							<a href="${pageContext.request.contextPath }/uat/uia/actionLogout.do"><spring:message code="comCmm.unitContent.3" /></a>
 						</c:if>
 						<c:if test="${loginVO == null }">
 							<jsp:forward page="/uat/uia/egovLoginUsr.do" />
-						</c:if>
+						</c:if> --%>
 						<br />
 					</h3>
 				</div>
 
 				<div class="panel-body">
-					<div class="bord-all text-lg-left">
-						<b><spring:message code="comCmm.unitContent.4" /><br />
-						<br />
-						<!-- 실행 시 오류 사항이 있으시면 표준프레임워크센터로 연락하시기 바랍니다. -->
-					</div>
-					<div class="bord-all text-lg-left">
+					<div class="bord-no text-lg-left mar-top">
 						<p>
-							<b><img src="${pageContext.request.contextPath }/images/egovframework/com/cmm/icon/tit_icon.png"> <spring:message code="comCmm.unitContent.5" /></b>
+							<b><img src="${pageContext.request.contextPath }/images/egovframework/com/cmm/icon/tit_icon.png"> 연구개발 목표</b>
 							<p /><!-- 화면 설명 -->
-							<spring:message code="comCmm.unitContent.6" />
-						<p />
-						<!-- 왼쪽 메뉴는 메뉴와 관련된 컴포넌트(메뉴관리, 사이트맵 등)들의 영향을 받지 않으며, -->
-						<spring:message code="comCmm.unitContent.7" />
-						<p />
-						<!-- 각 컴포넌트를 쉽게 찾아볼 수 있는 바로 가기 링크페이지입니다. -->
+							본 연구는 3차원 입체격자체계 기반 연구, 3차원 입체격자체계 핵심기술개발, 3차원 입체격자 통합운영 지원 기술 개발 및 실증서비스 연구를 수행함으로써 최종적으로 미래 지능사회 지원을 위한 새로운 패러다임의 3차원 입체격자체계 기반 국토 공간 통합관리 원천기술을 개발하는 것을 목표로 함.
+							<p />
+							<!-- 왼쪽 메뉴는 메뉴와 관련된 컴포넌트(메뉴관리, 사이트맵 등)들의 영향을 받지 않으며, -->
+							<spring:message code="comCmm.unitContent.7" />
+							<p />
+							<!-- 각 컴포넌트를 쉽게 찾아볼 수 있는 바로 가기 링크페이지입니다. -->
 						</p>
 					</div>
-					<div class="bord-all text-lg-left">
-						<p>
-							<b><img src="${pageContext.request.contextPath }/images/egovframework/com/cmm/icon/tit_icon.png"> egovframework.com.cmm.web.EgovComIndexController.java</b>
+					<div class="bord-no text-lg-left mar-top">
+						<b><img src="${pageContext.request.contextPath }/images/egovframework/com/cmm/icon/tit_icon.png"> 연구개발 내용</b>
 						<p />
-
-						<spring:message code="comCmm.unitContent.8" />
-						<p />
-						<!-- 컴포넌트 설치 후 설치된 컴포넌트들을 IncludedInfo annotation을 통해 찾아낸 후 -->
-						<spring:message code="comCmm.unitContent.9" />
+						3차원 입체격자체계 기반 국토 통합관리 지원 기술 개발은 총 3차년도 연구로 진행되며, 주요 연구개발 내용은 다움과 같음
 						<p />
 						<br />
-						<!-- 화면에 표시할 정보를 처리하는 Controller 클래스입니다. -->
-						<spring:message code="comCmm.unitContent.10" />
-						<p />
-						<!-- 개발 시 메뉴 구조가 잡히기 전에 배포 파일들에 포함된 공통 컴포넌트들의 목록성 화면에 URL을 제공하여 -->
-						<spring:message code="comCmm.unitContent.11" />
-						<p />
-						<!-- 개발자가 편리하게 활용할 수 있도록 작성되었습니다. -->
-						<spring:message code="comCmm.unitContent.12" />
-						<p />
-						<!-- 운영 시에 본 컨트롤을 사용하여 메뉴를 구성하는 경우, -->
-						<spring:message code="comCmm.unitContent.13" />
-						<p />
-						<!-- 성능 문제를 일으키거나 사용자별 메뉴 구성에 오류를 발생할 수 있기 때문에 -->
-						<spring:message code="comCmm.unitContent.14" />
-						<p />
-						<!-- 실 운영 시에는 삭제해서 배포하는 것을 권장해 드립니다. -->
-						</p>
-					</div>
+						3차원 입체격자 활용방안 및 실증서비스 연구
+						<ul>
+							<li>3차원 입체격자 타장성 연구, 3차원 입체격자 제도개선(안) 연구를 통해 실용화 방안 제시, 3차원 입체격자를 활용하는 실증서비스 발굴을 통해 다양한 서비스 모델 제시</li>
+						</ul>
+						3차원 입체격자체계 데이터 연계 기술개발
+						<ul>
+							<li>다중 공간정보 관련기관에서 활용 중인 정보를 DB to DB, TCP, 오프라인 등을 통해 수집하여 연계할 수 있는 모듈 개발, 실시간 생성되는 정보를 3차원 입체격자체계에 맞춰 갱신할 수 있는 모듈 개발</li>
+						</ul>						
+						3차원 입체격자체계 활용을 위한 통합운영 기술 개발
+						<ul>
+							<li>3차원 입체격자 가시화 기술, 공간 속성정보 조회 기술 등을 통해 다양한 정보를 3차원 입체격자를 기반으로 활용할 수 있는 핵심 기술 개발</li>
+							<li>개발 성과물은 3차원 입체격자 기술을 용용하는 실증서비스 연구에서 연계·활용</li>
+						</ul>
+				</div>
 				</div>
 			</div>
 		</div>
