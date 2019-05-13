@@ -66,6 +66,28 @@
 	</definition>
 
 
+
+	<definition name="cmworld/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/cmworld/{1}.jsp" />
+	</definition>
+
+	<definition name="cmworld/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/cmworld/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="cmworld/*/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/cmworld/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="cmworld/*/*/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/cmworld/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+
+	<definition name="cmworld/*/*/*/*/*" extends="ContentsLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/cmworld/{1}/{2}/{3}/{4}/{5}.jsp" />
+	</definition>
+
+
 	<definition name="CollapsedNavigationLayout" template="/WEB-INF/jsp/layout/CollapsedNavigationLayout.jsp">
 		<put-attribute name="header" value="/WEB-INF/jsp/layout/ContentsHeader.jsp" />
 		<put-attribute name="aside" value="/WEB-INF/jsp/layout/ContentsAside.jsp" />

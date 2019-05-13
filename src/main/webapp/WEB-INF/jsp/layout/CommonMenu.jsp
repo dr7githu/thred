@@ -80,59 +80,27 @@
 				<!--Category name-->
 				<li class="list-header">관리자 메뉴</li>
 				<li><a href="#">
-						<i class="demo-pli-split-vertical-2"></i> <span class="menu-title">관리 기능</span> <i class="arrow"></i>
+						<i class="demo-pli-split-vertical-2"></i> <span class="menu-title">Administration</span> <i class="arrow"></i>
 					</a> <!--Submenu-->
 					<ul class="collapse">
+						<li><a href="<c:url value='/uat/uap/selectLoginPolicyList.do'/>">로그인 정책 관리</a></li>
+						<li><a href="<c:url value='/uss/umt/EgovMberManage.do'/>">일반회원 관리 목록</a></li>
+						<li><a href="<c:url value='/uss/umt/dpt/selectDeptManageListView.do'/>">부서 관리</a></li>
+						<li><a href="<c:url value='/sym/ccm/ccc/SelectCcmCmmnClCodeList.do'/>">공통분류코드 관리</a></li>
+						<li><a href="<c:url value='/sym/ccm/cca/SelectCcmCmmnCodeList.do'/>">공통코드 관리</a></li>
+						<li><a href="<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>">공통상세코드 관리</a></li>
+						<li><a href="<c:url value='/sym/cal/EgovRestdeList.do'/>">공휴일 관리</a></li>
+						<li><a href="<c:url value='/sym/ccm/zip/EgovCcmZipList.do'/>">우편번호 관리</a></li>
+						<li><a href="<c:url value='/uss/ion/sit/selectSiteList.do'/>">사이트 관리</a></li>
+						
+<%-- 						
 						<c:forEach var="result" items="${resultList}" varStatus="status">
-							<c:if test="${isMai == 'false' && result.gid == '0'}">
-								<li>포털(예제) 메인화면</li>
-								<c:set var="isMai" value="false" />
-							</c:if>
-							<c:if test="${isUat == 'false' && result.gid == '10'}">
-								<li>사용자디렉토리/통합인증</li>
-								<c:set var="isUat" value="false" />
-							</c:if>
-							<c:if test="${isSec == 'false' && result.gid == '20'}">
-								<li>보안</li>
-								<c:set var="isSec" value="true" />
-							</c:if>
-							<c:if test="${isSts == 'false' && result.gid == '30'}">
-								<li>통계/리포팅</li>
-								<c:set var="isSts" value="true" />
-							</c:if>
-							<c:if test="${isCop == 'false' && result.gid == '40'}">
-								<li>협업</li>
-								<c:set var="isCop" value="true" />
-							</c:if>
-							<c:if test="${isUss == 'false' && result.gid == '50'}">
-								<li>사용자지원</li>
-								<c:set var="isUss" value="true" />
-							</c:if>
-							<c:if test="${isSym == 'false' && result.gid == '60'}">
-								<li>시스템관리</li>
-								<c:set var="isSym" value="true" />
-							</c:if>
-							<c:if test="${isSsi == 'false' && result.gid == '70'}">
-								<li>시스템/서비스연계</li>
-								<c:set var="isSsi" value="true" />
-							</c:if>
-							<c:if test="${isDam == 'false' && result.gid == '80'}">
-								<li>디지털 자산 관리</li>
-								<c:set var="isDam" value="true" />
-							</c:if>
-							<c:if test="${isCom == 'false' && result.gid == '90'}">
-								<li>요소기술</li>
-								<c:set var="isCom" value="true" />
-							</c:if>
-							<c:if test="${isExt == 'false' && result.gid == '100'}">
-								<li>외부 추가 컴포넌트</li>
-								<c:set var="isExt" value="true" />
-							</c:if>
 							<li><a href="${pageContext.request.contextPath}<c:out value="${result.listUrl}"/>">
 									<c:out value="${result.order}" />.<c:out value="${result.name}" />
 								</a>
 							</li>
-						</c:forEach>
+						</c:forEach> 
+--%>
 					</ul></li>
 					
 				<li class="list-divider"></li>
@@ -141,15 +109,12 @@
 				<li class="list-header">3D 격자 체계 </li>
 
 				<!--Menu list item-->
-				<li><a href="#">
-						<i class="demo-pli-photo-2"></i> <span class="menu-title">파일럿 프로그램 </span> <i class="arrow"></i>
-					</a> <!--Submenu-->
-					<ul class="collapse">
-						<li><a href="<c:url value='/nifty/demo/widget.do'/>">기본</a></li>
-						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">격자 체계</a></li>
-						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">카메라  무빙</a></li>
-						<li><a href="<c:url value='/nifty/demo/gridBootstrap.do' />">데이터 로딩</a></li>
-					</ul></li>
+				<li><a href="<c:url value='/cmworld/pilot/cmLoadPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">CM World</span> </a>
+				<li><a href="<c:url value='/cmworld/pilot/cmWorldGridPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Grid System</span> </a>
+				<li><a href="<c:url value='/cmworld/pilot/cmWorldCameraPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Camera Moving</span> </a>
+				<li><a href="<c:url value='/cmworld/pilot/cmWorldDataLoadPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Adjust Moving</span> </a>
+				<li><a href="<c:url value='/cmworld/pilot/cmWorldChemicalsHazardPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Chamical Hazard/span> </a>
+				
 					
 					
 <%-- 				<li class="list-divider"></li>

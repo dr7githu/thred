@@ -47,6 +47,17 @@
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/line-icons/premium-line-icons.min.css">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css">
 
+<style type="text/css">
+	#cmworld3Canvas {
+		background-color: #00ff00;
+		width: 100%;
+		height: 100%;
+		float: left;
+		display: block;
+	}
+</style>
+
+
 <!-- IMPORT JS -->
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script>
 <script type="text/javascript" src="<%=jqueryJs%>"></script>
@@ -61,10 +72,16 @@
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/skycons/skycons.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/widgets.js"></script>
+<script type="text/javascript" src="/skeleton/cmworld3/cm_compile.js"></script>
 
 <script type="text/javascript">
 	var bootstrapNfittyHome = "<%=bootstrapNfittyHome%>";
+	CMWORLD.Compile.includeCm3Library("/skeleton/cmworld3/");
 </script>
+
+<script type="text/javascript" src="/skeleton/cmworld3/Loader/OBJMTLLoader.js"></script>
+<script type="text/javascript" src="/skeleton/cmworld3/Utilities/SceneUtils.js"></script>
+
 </head>
 <body>
 	<!-- START OF CONTAINER -->
@@ -92,23 +109,36 @@
 
 					<!--Page Title-->
 					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-					<div id="page-title">
-						<h1 class="page-header text-overflow">Page Title</h1>
+<%-- 					<div id="page-title">
+						<h1 class="page-header text-overflow"><c:out value="${pageTitle}"/></h1>
+						<span class="badge badge-warning">3D DiMention</span>
 					</div>
-					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+ --%>					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 					<!--End page title-->
 
 
 					<!--Breadcrumb-->
 					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-					<ol class="breadcrumb">
+<!-- 					<ol class="breadcrumb">
 						<li><a href="#"> <i class="demo-pli-home"></i>
 						</a></li>
 						<li class="active">Lv1</li>
 						<li class="active">Lv2</li>
 					</ol>
-					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+ -->					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 					<!--End breadcrumb-->
+
+					<div class="pad-top mar-btm text-center">
+						<h2><c:out value="${pageTitle}"/></h2>
+<!--
+ 						<p>
+							Weather Icons is the only icon font and CSS, ready to be dropped right into any project that needs high quality weather, <br>maritime, and meteorological based icons!
+						</p>
+						<p>
+							<span class="badge badge-warning">3D DiMention</span>
+						</p>
+ -->
+					</div>
 
 				</div>
 

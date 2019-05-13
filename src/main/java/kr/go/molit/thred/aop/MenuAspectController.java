@@ -20,7 +20,7 @@ import egovframework.com.cmm.annotation.IncludedInfo;
 @Aspect
 public class MenuAspectController implements ApplicationContextAware {
 	
-	private final static Logger LOGGER = LoggerFactory.getLogger(MenuAspectController.class);
+	private final static Logger logger = LoggerFactory.getLogger(MenuAspectController.class);
 	
 	private ApplicationContext applicationContext;
 	private Map<Integer, IncludedCompInfoVO> map;
@@ -30,9 +30,11 @@ public class MenuAspectController implements ApplicationContextAware {
 		this.applicationContext = applicationContext;
 	}
 
-    @Pointcut("execution(public * kr.go.molit.aop.sample.*Sample.*(..))")
+    @Pointcut("execution(public * kr.go.molit.thred.*Controller.*(..))")
 	public void getEgovMenu() {
 		// To-Do getting menu list
+    	logger.info("Aspect pointcut get egov menu");    	
+    	
 		/* 최초 한 번만 실행하여 map에 저장해 놓는다. */
 		if (map == null) {
 			map = new TreeMap<Integer, IncludedCompInfoVO>();
@@ -50,7 +52,7 @@ public class MenuAspectController implements ApplicationContextAware {
 					annotation = methods[i].getAnnotation(IncludedInfo.class);
 
 					if (annotation != null) {
-						LOGGER.debug("Found @IncludedInfo Method : {}", methods[i]);
+						logger.debug("Found @IncludedInfo Method : {}", methods[i]);
 						zooVO = new IncludedCompInfoVO();
 						zooVO.setName(annotation.name());
 						zooVO.setOrder(annotation.order());
@@ -66,18 +68,18 @@ public class MenuAspectController implements ApplicationContextAware {
 					}
 				}
 			} catch (ClassNotFoundException e) {
-				LOGGER.error("No egovframework.com.uat.uia.web.EgovLoginController!!");
+				logger.error("No egovframework.com.uat.uia.web.EgovLoginController!!");
 			}
 			/* 여기까지 AOP Proxy로 인한 코드 */
 
 			/*@Controller Annotation 처리된 클래스를 모두 찾는다.*/
 			Map<String, Object> myZoos = applicationContext.getBeansWithAnnotation(Controller.class);
-			LOGGER.debug("How many Controllers : ", myZoos.size());
+			logger.debug("How many Controllers : ", myZoos.size());
 			for (final Object myZoo : myZoos.values()) {
 				Class<? extends Object> zooClass = myZoo.getClass();
 
 				Method[] methods = zooClass.getMethods();
-				LOGGER.debug("Controller Detected {}", zooClass);
+				logger.debug("Controller Detected {}", zooClass);
 				for (int i = 0; i < methods.length; i++) {
 					annotation = methods[i].getAnnotation(IncludedInfo.class);
 
