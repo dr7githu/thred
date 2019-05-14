@@ -50,8 +50,16 @@
 <style type="text/css">
 	#cmworld3Canvas {
 		background-color: #00ff00;
-		width: 100%;
-		height: 100%;
+		width: 100px;
+		height: 100px;
+		float: left;
+		display: block;
+		}
+		
+	#cmworldCanvas {
+		background-color: #00ff00;
+		width: 100px;
+		height: 100px;
 		float: left;
 		display: block;
 	}
