@@ -67,21 +67,25 @@
 
 
 <!-- IMPORT JS -->
-<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script>
-<script type="text/javascript" src="<%=jqueryJs%>"></script>
+<%-- <script type="text/javascript" src="<%=bootstrapNfittyPaceJs%>"></script> --%>
+<script type="text/javascript" src="/skeleton/nifty-v2.9.1/demo/js/jquery.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyJs%>"></script>
-<script type="text/javascript" src="<%=bootstrapNfittyPaceJs%>"></script>
-<%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/nifty-demo.min.js"></script> --%>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/morris.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/raphael-js/raphael.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.resize.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/skycons/skycons.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
-<script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/widgets.js"></script>
-<script type="text/javascript" src="/skeleton/cmworld3/cm_compile.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/datatables/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 
+<%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/nifty-demo.min.js"></script> --%>
+<%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script> --%>
+<%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/widgets.js"></script> --%>
+
+<script type="text/javascript" src="/skeleton/cmworld3/cm_compile.js"></script>
 <script type="text/javascript">
 	var bootstrapNfittyHome = "<%=bootstrapNfittyHome%>";
 	CMWORLD.Compile.includeCm3Library("/skeleton/cmworld3/");
