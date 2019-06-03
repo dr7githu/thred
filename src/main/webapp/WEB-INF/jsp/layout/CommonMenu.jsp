@@ -114,6 +114,7 @@
 				<li><a href="<c:url value='/cmworld/pilot/cmWorldCameraPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Camera Moving</span> </a>
 				<li><a href="<c:url value='/cmworld/pilot/cmWorldDataLoadPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Adjust Moving</span> </a>
 				<li><a href="<c:url value='/cmworld/pilot/cmWorldChemicalsHazardPilot.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Chamical Hazard</span> </a>
+				<li><a href="<c:url value='/simulation/flooding/gangnam.do'/>"><i class="demo-pli-photo-2"></i> <span class="menu-title">Flooding(GangNam)</span> </a>
 				
 					
 					

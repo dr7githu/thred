@@ -67,6 +67,15 @@
 				CMWORLD.cm_const.EarthRadius, {
 					toptilespan : 36
 				});
+		
+		cmworld.setWindowResizeCallback(function() {
+			var gap = 0;
+			var width = window.innerWidth - 100 - gap;
+			var height = window.innerHeight - 300 - gap;
+			
+			return { width: width, height: height };
+		});
+		
 		cmworld.option.worldTimer.setStartDateTime(2015, 7, 12, 14, 0, 0, 0);
 
 		cmworld
@@ -123,9 +132,6 @@
 </div> --%>
 
 <div class="panel pad-all">
-	<div class="panel-heading">
-		<h3 class="panel-title">Walking Mode</h3>
-	</div>
 	<!--Panel body-->
 	<div class="panel-body">
 		<div class="row" style="overflow: hidden">

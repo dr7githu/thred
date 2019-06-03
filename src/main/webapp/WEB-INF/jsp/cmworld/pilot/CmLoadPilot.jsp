@@ -17,6 +17,14 @@
 		
 		cmworld = new CMWORLD.CmWorld3(canvas, 127, 38,	CMWORLD.cm_const.EarthRadius);
 		
+		cmworld.setWindowResizeCallback(function ()	{
+			// canvas의 좌상단 기준으로 canvas의 크기를 계산해서 넣어줘야 한다.
+			var gap = 0;
+			var width = window.innerWidth - 100 - gap;
+			var height = window.innerHeight - 300 - gap;
+			return { width: width, height: height };
+		});
+		
 		loop();
 		
 		function loop() {

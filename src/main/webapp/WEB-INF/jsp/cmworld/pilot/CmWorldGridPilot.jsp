@@ -380,7 +380,16 @@
             var canvas = document.querySelector("#cmworldCanvas");
 
             cmworld = new CMWORLD.CmWorld3(canvas, 127, 38, CMWORLD.cm_const.EarthRadius, { toptilespan: 36 });
-				cmworld.option.worldTimer.setStartDateTime(2015, 7, 12, 14, 0, 0, 0);
+            
+            cmworld.setWindowResizeCallback(function() {
+            	var gap = 0;
+            	var width = window.innerWidth - 100 - gap;
+            	var height = window.innerHeight - 300 - gap;
+            	
+				return {width: width, height: height};            	
+            });
+            
+			cmworld.option.worldTimer.setStartDateTime(2015, 7, 12, 14, 0, 0, 0);
 
             cmworld.addTileImageLayer("base", "http://xdworld.vworld.kr:8080/XDServer/requestLayerNode?APIKey=767B7ADF-10BA-3D86-AB7E-02816B5B92E9&Layer=tile_mo_HD&Level={z}&IDX={x}&IDY={y}", 0, 15, 90, -90, -180, 180, "jpg", false);
             cmworld.addTerrainLayer("terrain", "http://xdworld.vworld.kr:8080/XDServer/requestLayerNode?APIKey=767B7ADF-10BA-3D86-AB7E-02816B5B92E9&Layer=dem&Level={z}&IDX={x}&IDY={y}", 0, 15, 90, -90, -180, 180, "");
@@ -400,6 +409,8 @@
             var look_h = 100;
 
             cmworld.gotoLookAt(eye_x, eye_y, eye_h, look_x, look_y, look_h);
+            
+
         };
 	</script>
 

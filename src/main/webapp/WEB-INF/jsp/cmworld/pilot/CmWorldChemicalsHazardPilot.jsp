@@ -949,6 +949,15 @@ window.onload = function ()
     canvas.onclick = mouseClick;
 
     cmworld = new CMWORLD.CmWorld3(canvas, 127.09812137375809, 37.507568118168656, 508.48281691968441, { toptilespan: 36 }, OnUpdate);
+    
+    cmworld.setWindowResizeCallback(function() {
+    	var gap = 0;
+    	var width = window.innerWidth - 100 - gap;
+    	var height = window.innerHeight - 300 - gap;
+    	
+    	return { width: width, height: height };
+    });
+    
     cmworld.option.worldTimer.setStartDateTime(2015, 7, 12, 14, 0, 0, 0);
 
     //gliEmbedDebug = true;
@@ -978,9 +987,6 @@ window.onload = function ()
 </script>
 
 <div class="panel pad-all">
-	<div class="panel-heading">
-		<h3 class="panel-title">Harzard</h3>
-	</div>
 	<!--Panel body-->
 	<div class="panel-body">
 		<div class="row">
@@ -988,22 +994,22 @@ window.onload = function ()
 			<button class="btn btn-primary" onclick="moveBox()">moveBox</button>
 			<button class="btn btn-info" onclick="fire()">fire</button>
 			<!-- 					
-					<button class="btn btn-default" onclick="correct2()">correct2</button> 
-					<button class="btn btn-default" onclick="ViewAll()">ViewAll</button> 
-					<button class="btn btn-default" onclick="onOffBuilding()">OnOff Building</button> 
--->
+			<button class="btn btn-default" onclick="correct2()">correct2</button> 
+			<button class="btn btn-default" onclick="ViewAll()">ViewAll</button> 
+			<button class="btn btn-default" onclick="onOffBuilding()">OnOff Building</button> 
+			-->
 			<button class="btn btn-success" onclick="View30mCube()">onOff 10m Wire</button>
 			<!-- 					
-					<button class="btn btn-default" onclick="correct()">correct</button>  
--->
+			<button class="btn btn-default" onclick="correct()">correct</button>  
+			-->
 			<button class="btn btn-mint" onclick="rotateAroundCamera()">rotateAroundCamera</button>
 			<button class="btn btn-warning" onclick="View20mCube()">onOff 20m Cube</button>
 			<button class="btn btn-danger" onclick="ViewToggle()">ViewToggle</button>
 			<button class="btn btn-pink" onclick="underground()">underground</button>
 			<button class="btn btn-purple" onclick="selectCube()">selectCube</button>
 			<!--  
-					<button class="btn btn-default" onclick="correct3()">correct3</button>
--->
+			<button class="btn btn-default" onclick="correct3()">correct3</button>
+			-->
 
 		</div>
 		<div class="row mar-top" style="overflow: hidden">

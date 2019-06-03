@@ -46,6 +46,8 @@
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>css/demo/nifty-demo.min.css">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/line-icons/premium-line-icons.min.css">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>plugins/weather-icons/css/weather-icons.min.css">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>plugins/weather-icons/css/weather-icons-wind.min.css">
 
 <style type="text/css">
 	#cmworld3Canvas {
@@ -75,11 +77,14 @@
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/raphael-js/raphael.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.resize.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.tooltip.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/skycons/skycons.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/datatables/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/datatables/media/js/dataTables.bootstrap.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/dashboard.js"></script>
 
 <%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>js/demo/nifty-demo.min.js"></script> --%>
 <%-- <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/gauge-js/gauge.min.js"></script> --%>
@@ -142,14 +147,7 @@
 
 					<div class="pad-top mar-btm text-center">
 						<h2><c:out value="${pageTitle}"/></h2>
-<!--
- 						<p>
-							Weather Icons is the only icon font and CSS, ready to be dropped right into any project that needs high quality weather, <br>maritime, and meteorological based icons!
-						</p>
-						<p>
-							<span class="badge badge-warning">3D DiMention</span>
-						</p>
- -->
+ 						<p><c:out value="${pageTitleBodyText}"/></p>
 					</div>
 
 				</div>

@@ -31,8 +31,7 @@ html, body {
 
 	window.onload = function() {
 		var canvas = document.querySelector("#cmworldCanvas");
-		cmworld = new CMWORLD.CmWorld3(canvas, 127, 38,
-				CMWORLD.cm_const.EarthRadius);
+		cmworld = new CMWORLD.CmWorld3(canvas, 127, 38, CMWORLD.cm_const.EarthRadius);
 
 		loop();
 

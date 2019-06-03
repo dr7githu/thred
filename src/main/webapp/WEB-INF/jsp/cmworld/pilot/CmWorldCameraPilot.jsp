@@ -401,6 +401,14 @@
 					toptilespan : 36
 				});
 		cmworld.option.worldTimer.setStartDateTime(2015, 7, 12, 14, 0, 0, 0);
+		
+		cmworld.setWindowResizeCallback(function() {
+			var gap = 0;
+			var width = window.innerWidth - 100 - gap;
+			var height = window.innerHeight = 250 - gap;
+			
+			return {width: width, height: height };
+		});
 
 		// 여기에 transparancy 추가...
 		// 투명 값은 여기서 설정
