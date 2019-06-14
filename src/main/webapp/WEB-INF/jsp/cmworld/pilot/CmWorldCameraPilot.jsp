@@ -353,44 +353,25 @@
 		userLayer.add(flycenter);
 
 		//undergroundCubeLayer.addTargetCamera("camera", 14, 100);
-		flyCubeLayer.addTargetObject2("fly0", flycenter, 0, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly1", flycenter, 1, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly2", flycenter, 2, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly3", flycenter, 3, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly4", flycenter, 4, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly5", flycenter, 5, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly6", flycenter, 6, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly7", flycenter, 7, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly8", flycenter, 8, 10000,
-				new THREE.Color(0, 0, 0.5));
-		flyCubeLayer.addTargetObject2("fly9", flycenter, 9, 5000,
-				new THREE.Color(0, 0, 0.2));
-		flyCubeLayer.addTargetObject2("fly10", flycenter, 10, 2000,
-				new THREE.Color(0, 0.5, 0.5));
-		flyCubeLayer.addTargetObject2("fly11", flycenter, 11, 1280,
-				new THREE.Color(0, 0.5, 0.8));
-		flyCubeLayer.addTargetObject2("fly12", flycenter, 12, 640,
-				new THREE.Color(0, 0.5, 1));
-		flyCubeLayer.addTargetObject2("fly13", flycenter, 13, 320,
-				new THREE.Color(0.5, 0.5, 0.1));
-		flyCubeLayer.addTargetObject2("fly14", flycenter, 14, 160,
-				new THREE.Color(0.5, 0.8, 0));
-		flyCubeLayer.addTargetObject2("fly15", flycenter, 15, 80,
-				new THREE.Color(1, 0.5, 0));
-		flyCubeLayer.addTargetObject2("fly16", flycenter, 16, 40,
-				new THREE.Color(1, 0.2, 0));
-		flyCubeLayer.addTargetObject2("fly17", flycenter, 17, 30,
-				new THREE.Color(1, 0, 0));
-		flyCubeLayer.addTargetObject2("fly", flycenter, 18, 20,
-				new THREE.Color(1, 1, 1));
+		flyCubeLayer.addTargetObject2("fly0", flycenter, 0, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly1", flycenter, 1, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly2", flycenter, 2, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly3", flycenter, 3, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly4", flycenter, 4, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly5", flycenter, 5, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly6", flycenter, 6, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly7", flycenter, 7, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly8", flycenter, 8, 10000,		new THREE.Color(0, 0, 0.5));
+		flyCubeLayer.addTargetObject2("fly9", flycenter, 9, 5000,		new THREE.Color(0, 0, 0.2));
+		flyCubeLayer.addTargetObject2("fly10", flycenter, 10, 2000,		new THREE.Color(0, 0.5, 0.5));
+		flyCubeLayer.addTargetObject2("fly11", flycenter, 11, 1280,		new THREE.Color(0, 0.5, 0.8));
+		flyCubeLayer.addTargetObject2("fly12", flycenter, 12, 640,		new THREE.Color(0, 0.5, 1));
+		flyCubeLayer.addTargetObject2("fly13", flycenter, 13, 320,		new THREE.Color(0.5, 0.5, 0.1));
+		flyCubeLayer.addTargetObject2("fly14", flycenter, 14, 160,		new THREE.Color(0.5, 0.8, 0));
+		flyCubeLayer.addTargetObject2("fly15", flycenter, 15, 80,		new THREE.Color(1, 0.5, 0));
+		flyCubeLayer.addTargetObject2("fly16", flycenter, 16, 40,		new THREE.Color(1, 0.2, 0));
+		flyCubeLayer.addTargetObject2("fly17", flycenter, 17, 30,		new THREE.Color(1, 0, 0));
+		flyCubeLayer.addTargetObject2("fly", flycenter, 18, 20,			new THREE.Color(1, 1, 1));
 	}
 
 	window.onload = function() {
@@ -400,12 +381,13 @@
 				CMWORLD.cm_const.EarthRadius * 2.5, {
 					toptilespan : 36
 				});
+		
 		cmworld.option.worldTimer.setStartDateTime(2015, 7, 12, 14, 0, 0, 0);
 		
 		cmworld.setWindowResizeCallback(function() {
 			var gap = 0;
 			var width = window.innerWidth - 100 - gap;
-			var height = window.innerHeight = 250 - gap;
+			var height = window.innerHeight - 330 - gap;
 			
 			return {width: width, height: height };
 		});

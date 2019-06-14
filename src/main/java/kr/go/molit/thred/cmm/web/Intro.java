@@ -1,4 +1,4 @@
-package kr.go.molit.thred.intro.web;
+package kr.go.molit.thred.cmm.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,14 +7,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ThredIntro {
+public class Intro {
 	
-	private final static Logger logger = LoggerFactory.getLogger(ThredIntro.class);
+	private final static Logger logger = LoggerFactory.getLogger(Intro.class);
 
 	@RequestMapping(value="/thredIntro.do")
 	public String ThredIntro(ModelMap map) {
 		logger.info("url Thred Intro was called");
-		return "thred/comm/intro/ThredIntro";
+		return "thred/cmm/intro/ThredIntro";
 	}
 	
 	@RequestMapping(value="/thredIndex.do")

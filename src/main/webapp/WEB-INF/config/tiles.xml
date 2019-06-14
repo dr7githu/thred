@@ -8,8 +8,8 @@
 		<put-attribute name="contents" value="/WEB-INF/jsp/egovframework/com/uat/uia/{1}.jsp" />
 	</definition>
 
-	<definition name="thred/comm/intro/ThredIntro" extends="SingleLayout">
-		<put-attribute name="contents" value="/WEB-INF/jsp/thred/comm/intro/ThredIntro.jsp" />
+	<definition name="thred/cmm/intro/ThredIntro" extends="SingleLayout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/thred/cmm/intro/ThredIntro.jsp" />
 	</definition>
 	
 	<definition name="egovframework/com/uat/uia/EgovLoginUsr" extends="SingleLayout">
