@@ -9,6 +9,84 @@
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
+<style type="text/css">
+.dg.main.taller-than-window .close-button {
+    border-top: 1px solid #ddd;
+}
+
+.dg.main .close-button {
+    background-color: #ccc;
+    visibility: hidden;
+}
+ 
+.dg.main .close-button:hover {
+    background-color: #ddd;
+}
+
+.dg {
+    color: #555;
+    text-shadow: none !important;
+}
+
+.dg.main::-webkit-scrollbar {
+    background: #26a69a;
+}
+
+.dg.main::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+ 
+.dg li:not(.folder) {
+    background: #26a69a;
+    border-bottom: 1px solid #ddd;
+    margin: 1px;
+    font-weight: 300;
+    font-size: 1.3em;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+}
+ 
+.dg li.save-row .button {
+    text-shadow: none !important;
+}
+
+.dg li.title {
+    background: #e8e8e8 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;
+}
+
+.dg .cr.function:hover,.dg .cr.boolean:hover {
+    background: #fff;
+}
+ 
+.dg .c input[type=text] {
+    background: #e9e9e9;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+ 
+.dg .c input[type=text]:hover {
+    background: #eee;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+ 
+.dg .c input[type=text]:focus {
+    background: #eee;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+ 
+.dg .c .slider {
+    background: #e9e9e9;
+}
+
+.dg .c .slider:hover {
+    background: #fffff;
+}
+</style>
 
 <script src="/skeleton/cmworld3/Utilities/dat.gui.min.js"></script>
 
@@ -24,8 +102,8 @@
 
         var options = function () {
             this.opacity = 0.5;
-            this.floodingHeight = 50;
-            this.color = "#0000ff";
+            this.floodingHeight = 12;
+            this.color = "#0077be";
         };
         
         function SetOption() {
@@ -44,7 +122,7 @@
             var ptlist = m_ptlist; //이전에 scale이 이미 곱해져 있음.
             var scale = 10000.0;
             var earthRadius = CMWORLD.cm_const.EarthRadius;
-            var origin = CMWORLD.CmMathEngine.Geo2Cartesian(ptlist[0].x / scale, ptlist[0].y / scale, ptlist[0].z + earthRadius);
+            var origin = CMWORLD.CmMathEngine.Geo2Cartesian((ptlist[0].x / scale), (ptlist[0].y / scale), (ptlist[0].z + earthRadius));
 
             var shape = new THREE.Shape(ptlist);
             var extrudeSettings = { amount: height, bevelEnabled: false, bevelSegments: 2, steps: 1, bevelSize: 1, bevelThickness: 1 };
@@ -156,15 +234,19 @@
 
             volumnOption = new options();
 
-            gui = new dat.GUI();
+            gui = new dat.GUI({ autoPlace: false, width: 300  });
             gui.add(volumnOption, 'opacity', 0, 1.0).onChange(SetOption);
             gui.add(volumnOption, 'floodingHeight', 0, 70).onChange(SetOption);
             gui.addColor(volumnOption, 'color').onChange(SetOption);
 
             gui.open();
 
-            gui.domElement.parentElement.style.zIndex = 10000;
-
+            //gui.domElement.parentElement.style.zIndex = 10000;
+ 			
+            //$("#adjusting-tools").append(gui.domElement);
+            var customContainer = document.getElementById('adjusting-tools');
+            customContainer.appendChild(gui.domElement);
+            
             m_ptlist.push({ x: 126.87126385502455, y: 37.51085388130343, z: 0 });
             m_ptlist.push({ x: 126.86831394754071, y: 37.50605724612568, z: 0 });
             m_ptlist.push({ x: 126.86684541141935, y: 37.50072997343536, z: 0 });
@@ -183,13 +265,8 @@
 </script>
 
 <div class="row">
-	<div class="col-lg-10">
+	<div class="col-lg-9">
 		<div class="panel pad-all">
-			<!-- 
-	<div class="panel-heading">
-		<h3 class="panel-title">Load CM World</h3>
-	</div>
-	 -->
 			<!--Panel body-->
 			<div class="panel-body">
 				<div class="row" style="overflow: hidden">
@@ -201,33 +278,31 @@
 		</div>
 	</div>
 
-	<div class="col-lg-2">
+	<div class="col-lg-3">
 		<div class="row">
 			<div class="col-sm-12 col-lg-12">
-
-				<!--Sparkline Area Chart-->
-				<div class="panel panel-success panel-colorful">
+				<!-- Adjusting pannel -->
+				<div class="panel panel-mint panel-colorful">
 					<div class="pad-all">
 						<p class="text-lg text-semibold">
-							<i class="wi wi-rain icon-fw"></i> 강수량
+							<i class="wi ion-cube icon-fw"></i> Adjust Pannel
+						</p>
+					<!-- 
+						<p class="mar-no">
+							<span class="pull-right text-bold">132¤</span> opacity
 						</p>
 						<p class="mar-no">
-							<span class="pull-right text-bold">132㎜</span> Total Precipitation
+							<span class="pull-right text-bold">1.45㎜</span> flooding height
 						</p>
 						<p class="mar-no">
-							<span class="pull-right text-bold">1.45㎜</span> Hourly Precipitation
+							<span class="pull-right text-bold">#0000ff HEX</span> color
 						</p>
 					</div>
 					<div class="pad-all">
-						<p class="text-semibold text-uppercase text-main">Tips</p>
-						<p class="text-muted mar-top">일간 8회 3시간 간격</p>
-					</div>
-					<div class="pad-top text-center">
-						<!--Placeholder-->
-						<div id="demo-sparkline-area" class="sparklines-full-content"></div>
+					-->
+						<div class="pad-btm mar-lft"  id="adjusting-tools"></div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 		<div class="row">
@@ -237,12 +312,14 @@
 				<!--Sparkline Line Chart-->
 				<div class="panel panel-info panel-colorful">
 					<div class="pad-all">
-						<p class="text-lg text-semibold">풍속</p>
-						<p class="mar-no">
-							<span class="pull-right text-bold">$764</span> Today
+						<p class="text-lg text-semibold">
+							<i class="wi wi-strong-wind icon-fw"></i> Wind
 						</p>
 						<p class="mar-no">
-							<span class="pull-right text-bold">$1,332</span> Last 7 Day
+							<span class="pull-right text-bold">4 ㎧</span> 풍속
+						</p>
+						<p class="mar-no">
+							<span class="pull-right text-bold"><i class="wi wi-wind towards-113-deg"></i></span> 풍향
 						</p>
 					</div>
 					<div class="pad-top text-center">
@@ -259,7 +336,7 @@
 				<div class="panel panel-purple panel-colorful">
 					<div class="pad-all">
 						<p class="text-lg text-semibold">
-							<i class="demo-pli-basket-coins icon-fw"></i> 대기확산지수
+							<i class="demo-pli-basket-coins icon-fw"></i> 풍향
 						</p>
 						<p class="mar-no">
 							<span class="pull-right text-bold">$764</span> Today

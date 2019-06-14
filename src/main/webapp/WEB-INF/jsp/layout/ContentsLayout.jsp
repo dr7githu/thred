@@ -48,6 +48,7 @@
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>premium/icon-sets/icons/solid-icons/premium-solid-icons.min.css">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>plugins/weather-icons/css/weather-icons.min.css">
 <link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>plugins/weather-icons/css/weather-icons-wind.min.css">
+<link rel="stylesheet" type="text/css" href="<%=bootstrapNfittyHome%>plugins/ionicons/css/ionicons.min.css">
 
 <style type="text/css">
 	#cmworld3Canvas {
