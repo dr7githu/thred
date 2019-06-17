@@ -451,5 +451,11 @@ public class CmWorldPilotController implements ApplicationContextAware {
 		model.addAttribute("pageTitle", "CM World Chemicals Hazard Pilot");
 		return "cmworld/pilot/CmWorldChemicalsHazardPilot";
 	}
+	
+	@RequestMapping(value="/cmworld/pilot/threeJsTester.do")
+	public String ThreeJsTester(ModelMap model) {
+		
+		return "cmworld/pilot/ThreeJsTester";
+	}
 
 }

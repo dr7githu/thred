@@ -70,7 +70,7 @@
 		
 		cmworld.setWindowResizeCallback(function() {
 			var gap = 0;
-			var width = window.innerWidth - 100 - gap;
+			var width = window.innerWidth - 330 - gap;
 			var height = window.innerHeight - 300 - gap;
 			
 			return { width: width, height: height };
@@ -134,7 +134,7 @@
 <div class="panel pad-all">
 	<!--Panel body-->
 	<div class="panel-body">
-		<div class="row" style="overflow: hidden">
+		<div class="row">
 			<div class="row">
 				<div class="col-lg-6 text-xs">
 					이동: 키보드 방향키<br> 방향전환: 마우스 버튼누르고 회전<br>
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row mar-top" style="overflow: hidden">
+		<div class="row mar-top">
 			<div class="pad-right">
 				<canvas id="cmworldCanvas"></canvas>
 			</div>

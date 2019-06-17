@@ -952,7 +952,7 @@ window.onload = function ()
     
     cmworld.setWindowResizeCallback(function() {
     	var gap = 0;
-    	var width = window.innerWidth - 100 - gap;
+    	var width = window.innerWidth - 330 - gap;
     	var height = window.innerHeight - 300 - gap;
     	
     	return { width: width, height: height };
@@ -1012,84 +1012,10 @@ window.onload = function ()
 			-->
 
 		</div>
-		<div class="row mar-top" style="overflow: hidden">
+		<div class="row mar-top">
 			<div class="pad-right">
 				<canvas id="cmworldCanvas"></canvas>
 			</div>
 		</div>
 	</div>
 </div>
-
-<%-- 
-<div class="row">
-	<div class="panel">
-		<div class="panel-heading">
-			<h3 id="txtLabel" class="panel-title">Harzard</h3>
-		</div>
-
-		<!--Panel body-->
-		<div class="panel-body">
-			<div class="row">
-				<div class="col-lg-1 text-xs">
-
-										<div id="legend" style="position: absolute; height: auto; width: 200px; top: 50px; left: 10px; background-color: white; padding: 10px 5px; display: none; ">
-						<table>
-							<caption>범례</caption>
-							<tbody>
-								<tr>
-									<td style="width: 80px; text-align: center;">분석면적</td>
-									<th id="all" style="text-align: center; width: 55%;">0</th>
-								</tr>
-								<tr>
-									<td style="text-align: center;">빨간가스</td>
-									<th id="red" style="background-color: rgb(255, 0, 0); text-align: center;">0</th>
-								</tr>
-								<tr>
-									<td style="text-align: center;">파란가스</td>
-									<th id="blue" style="background-color: rgb(0, 0, 255); text-align: center;">0</th>
-								</tr>
-								<tr>
-									<td style="text-align: center;">혼합</td>
-									<th id="green" style="background-color: rgb(0, 255, 0); text-align: center;">0</th>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					
-				</div>
-				<div class="col-lg-11 text-right">
-					<button class="btn btn-dark" onclick="View10mCube()">onOff 10m Cube</button>
-					<button class="btn btn-primary" onclick="moveBox()">moveBox</button>
-					<button class="btn btn-info" onclick="fire()">fire</button>
-					<!-- 					
-					<button class="btn btn-default" onclick="correct2()">correct2</button> 
-					<button class="btn btn-default" onclick="ViewAll()">ViewAll</button> 
-					<button class="btn btn-default" onclick="onOffBuilding()">OnOff Building</button> 
--->
-					<button class="btn btn-success" onclick="View30mCube()">onOff 10m Wire</button>
-					<!-- 					
-					<button class="btn btn-default" onclick="correct()">correct</button>  
--->
-					<button class="btn btn-mint" onclick="rotateAroundCamera()">rotateAroundCamera</button>
-					<button class="btn btn-warning" onclick="View20mCube()">onOff 20m Cube</button>
-					<button class="btn btn-danger" onclick="ViewToggle()">ViewToggle</button>
-					<button class="btn btn-pink" onclick="underground()">underground</button>
-					<button class="btn btn-purple" onclick="selectCube()">selectCube</button>
-					<!--  
-					<button class="btn btn-default" onclick="correct3()">correct3</button>
--->
-				</div>
-			</div>
-			<div class="row">
-				<div class="row" style="overflow: hidden">
-					<div class="pad-right">
-						<canvas id="cmworldCanvas" class="col-lg-5 mar-ver"></canvas>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
- --%>

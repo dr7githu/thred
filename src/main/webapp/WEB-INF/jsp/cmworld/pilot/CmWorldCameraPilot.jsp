@@ -38,11 +38,6 @@
 	var flyCubeLayer;
 
 	loadPipeline = function() {
-		//var filename = ".//model//GangnamPipe//GangnamPipe.obj";
-		//var mtlname = ".//model//GangnamPipe//GangnamPipe.mtl";
-
-		//var filename = "./model/GangnamPipe/GangnamPipe01.obj";
-		//var mtlname = "./model/GangnamPipe/GangnamPipe01.mtl";
 
 		var filename = "/skeleton/cmworld3/model/Drone-MQ27/MQ-27.obj";
 		var mtlname = "/skeleton/cmworld3/model/Drone-MQ27/MQ-27.mtl";
@@ -386,7 +381,7 @@
 		
 		cmworld.setWindowResizeCallback(function() {
 			var gap = 0;
-			var width = window.innerWidth - 100 - gap;
+			var width = window.innerWidth - 330 - gap;
 			var height = window.innerHeight - 330 - gap;
 			
 			return {width: width, height: height };
@@ -838,7 +833,7 @@
 	</div>
 	<!--Panel body-->
 	<div class="panel-body">
-		<div class="row" style="overflow: hidden">
+		<div class="row">
 			<div class="pad-right">
 				<canvas id="cmworld3Canvas"></canvas>
 			</div>

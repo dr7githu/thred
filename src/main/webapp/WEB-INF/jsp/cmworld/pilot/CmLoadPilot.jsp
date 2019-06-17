@@ -20,8 +20,8 @@
 		cmworld.setWindowResizeCallback(function ()	{
 			// canvas의 좌상단 기준으로 canvas의 크기를 계산해서 넣어줘야 한다.
 			var gap = 0;
-			var width = window.innerWidth - 100 - gap;
-			var height = window.innerHeight - 230 - gap;
+			var width = window.innerWidth - 330 - gap;
+			var height = window.innerHeight - 330 - gap;
 			return { width: width, height: height };
 		});
 		
@@ -40,7 +40,7 @@
 	</div>
 	<!--Panel body-->
 	<div class="panel-body">
-		<div class="row" style="overflow: hidden">
+		<div class="row">
 			<div class="pad-right">
 				<canvas id="cmworldCanvas"></canvas>
 			</div>

@@ -383,7 +383,7 @@
             
             cmworld.setWindowResizeCallback(function() {
             	var gap = 0;
-            	var width = window.innerWidth - 100 - gap;
+            	var width = window.innerWidth - 330 - gap;
             	var height = window.innerHeight - 300 - gap;
             	
 				return {width: width, height: height};            	
@@ -420,7 +420,7 @@
 	</div>
 	<!--Panel body-->
 	<div class="panel-body">
-		<div class="row" style="overflow: hidden">
+		<div class="row">
 			<div class="pad-right">
 				<canvas id="cmworldCanvas"></canvas>
 			</div>
