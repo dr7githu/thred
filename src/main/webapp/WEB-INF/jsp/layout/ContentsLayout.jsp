@@ -70,13 +70,17 @@
 
 
 <!-- IMPORT JS -->
-<%-- <script type="text/javascript" src="<%=bootstrapNfittyPaceJs%>"></script> --%>
+<%-- 
+<script type="text/javascript" src="<%=bootstrapNfittyPaceJs%>"></script> 
 <script type="text/javascript" src="/skeleton/nifty-v2.9.1/demo/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+--%>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<%=bootstrapJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyJs%>"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/morris.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/morris-js/raphael-js/raphael.min.js"></script>
-<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.min.js"></script>
+<script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.resize.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/flot-charts/jquery.flot.tooltip.min.js"></script>
 <script type="text/javascript" src="<%=bootstrapNfittyHome%>plugins/skycons/skycons.min.js"></script>

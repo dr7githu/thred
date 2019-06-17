@@ -841,18 +841,18 @@
 			<!--Panel body-->
 			<div class="panel-body">
 				<div class="row">
-					<a href="#" onclick="geometryExam()" >Geometry</a>
-					<a href="#" onclick="LineExam()" >Line</a>
-					<a href="#" onclick="animationModel()" >AnimationModel</a>
-					<a href="#" onclick="moveModel()" >moveModel</a>
-					<a href="#" onclick="colladaExam()" >loading_collada</a>
-					<a href="#" onclick="pointsExam()" >point1</a>
-					<a href="#" onclick="point2Exam()" >point2</a>
-					<a href="#" onclick="text3DExam()" >3D Text</a>
-					<a href="#" onclick="worldPositionMeshExam()" >WorldPositionMesh</a>
-					<a href="#" onclick="load3DS()" >load 3ds</a>
+					<button class="btn btn-dark" onclick="geometryExam()" >Geometry</button>
+					<button class="btn btn-primary" onclick="LineExam()" >Line</button>
+					<button class="btn btn-info" onclick="animationModel()" >AnimationModel</button>
+					<button class="btn btn-success" onclick="moveModel()" >moveModel</button>
+					<button class="btn btn-mint" onclick="colladaExam()" >loading_collada</button>
+					<button class="btn btn-warning" onclick="pointsExam()" >point1</button>
+					<button class="btn btn-danger" onclick="point2Exam()" >point2</button>
+					<button class="btn btn-pink" onclick="text3DExam()" >3D Text</button>
+					<button class="btn btn-purple" onclick="worldPositionMeshExam()" >WorldPositionMesh</button>
+					<button class="btn btn-dark" onclick="load3DS()" >load 3ds</button>
 				</div>
-				<div class="row">
+				<div class="row mar-top">
 					<canvas id="cmworldCanvas"></canvas>
 				</div>
 			</div>

@@ -457,5 +457,11 @@ public class CmWorldPilotController implements ApplicationContextAware {
 		
 		return "cmworld/pilot/ThreeJsTester";
 	}
+	
+	@RequestMapping(value="/cmworld/pilot/threeJsWater.do")
+	public String ThreeJsWater(ModelMap model) {
+		
+		return "cmworld/pilot/ThreeJsWater";
+	}
 
 }
