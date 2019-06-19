@@ -9,20 +9,22 @@
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<script type="text/javascript" charset="utf-8" src="/skeleton/three/examples/js/GPUParticleSystem.js"></script>
-<script type="text/javascript" charset="utf-8" src="/skeleton/three/examples/js/renderers/CSS3DRenderer.js"></script>
-<script type="text/javascript" charset="utf-8" src="/skeleton/three/examples/js/libs/stats.min.js"></script>
 
 
-<script>
-	var cmworld;
-	var gui;
-	var canvasLeft;
-	var canvasTop;
-	var font = null;
-	var clock = new THREE.Clock(true);
-	var tick = 0;
-	var selectedUserObject = null;
+	<script src="/skeleton/three/examples/js/GPUParticleSystem.js" charset="utf-8"></script>
+	<script src="/skeleton/three/examples/js/renderers/CSS3DRenderer.js" charset="utf-8"></script>
+	<script src="/skeleton/three/examples/js/libs/stats.min.js" charset="utf-8"></script>
+
+
+	<script>
+		var cmworld;
+		var gui;
+		var canvasLeft;
+		var canvasTop;
+		var font = null;
+		var clock = new THREE.Clock(true);
+		var tick = 0;
+		var selectedUserObject = null;
 
 
 		function loadFont() {
@@ -718,9 +720,9 @@
 		}
 
 
-	init = function () {
-		loadFont();
-	}
+		init = function () {
+			loadFont();
+		}
 
 
 		mouseClick = function (event) {
@@ -803,23 +805,11 @@
 
 		window.onload = function () {
 			var canvas = document.querySelector("#cmworldCanvas");
-			
 			canvas.onclick = mouseClick;
 			canvas.onmousemove = mouseMove;
 
 			// xdworldData
 			cmworld = new CMWORLD.CmWorld3(canvas, 127, 37.5, 10000, { toptilespan: 36 });
-			
-			// 
-    		cmworld.setWindowResizeCallback(function ()	{
-    			// canvas의 좌상단 기준으로 canvas의 크기를 계산해서 넣어줘야 한다.
-    			var gap = 0;
-    			var width = window.innerWidth - 310 - gap;
-    			var height = window.innerHeight - 330 - gap;
-    			return { width: width, height: height };
-    		});
-			
-			
 
 			cmworld.addTileImageLayer("base", "http://xdworld.vworld.kr:8080/XDServer/requestLayerNode?APIKey=767B7ADF-10BA-3D86-AB7E-02816B5B92E9&Layer=tile_mo_HD&Level={z}&IDX={x}&IDY={y}", 0, 15, 90, -90, -180, 180, "jpg", false);
 			cmworld.addTerrainLayer("terrain", "http://xdworld.vworld.kr:8080/XDServer/requestLayerNode?APIKey=767B7ADF-10BA-3D86-AB7E-02816B5B92E9&Layer=dem&Level={z}&IDX={x}&IDY={y}", 0, 15, 90, -90, -180, 180, "");
@@ -834,33 +824,29 @@
 		}
 
 	</script>
-	
-<div class="row">
-	<div class="col-lg-12">
-		<div class="panel pad-all">
-			<!--Panel body-->
-			<div class="panel-body">
-				<div class="row">
-					<button class="btn btn-dark" onclick="geometryExam()" >Geometry</button>
-					<button class="btn btn-primary" onclick="LineExam()" >Line</button>
-					<button class="btn btn-info" onclick="animationModel()" >AnimationModel</button>
-					<button class="btn btn-success" onclick="moveModel()" >moveModel</button>
-					<button class="btn btn-mint" onclick="colladaExam()" >loading_collada</button>
-					<button class="btn btn-warning" onclick="pointsExam()" >point1</button>
-					<button class="btn btn-danger" onclick="point2Exam()" >point2</button>
-					<button class="btn btn-pink" onclick="text3DExam()" >3D Text</button>
-					<button class="btn btn-purple" onclick="worldPositionMeshExam()" >WorldPositionMesh</button>
-					<button class="btn btn-dark" onclick="load3DS()" >load 3ds</button>
-				</div>
-				<div class="row mar-top">
-					<canvas id="cmworldCanvas"></canvas>
-				</div>
-			</div>
+
+<div class="panel pad-all">
+	<!--Panel body-->
+	<div class="panel-body">
+		<div class="row">
+			<canvas id="cmworldCanvas"></canvas>
+			<div id="container"></div>
 		</div>
 	</div>
 </div>
-	
-<script id="vshader" type="x-shader/x-vertex">
+
+	<a href="#" onclick="geometryExam()" style="right: 10px; top: 20px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">Geometry</a>
+	<a href="#" onclick="LineExam()" style="right: 10px; top: 40px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">Line</a>
+	<a href="#" onclick="animationModel()" style="right: 10px; top: 60px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">AnimationModel</a>
+	<a href="#" onclick="moveModel()" style="right: 10px; top: 80px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">moveModel</a>
+	<!--<a href="#" onclick="colladaExam()" style="right: 10px; top: 100px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">loading_collada</a>-->
+	<a href="#" onclick="pointsExam()" style="right: 10px; top: 120px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">point1</a>
+	<a href="#" onclick="point2Exam()" style="right: 10px; top: 140px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">point2</a>
+	<a href="#" onclick="text3DExam()" style="right: 10px; top: 160px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">3D Text</a>
+	<a href="#" onclick="worldPositionMeshExam()" style="right: 10px; top: 180px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">WorldPositionMesh</a>
+	<a href="#" onclick="load3DS()" style="right: 10px; top: 200px; position: absolute; z-index: 10000;color: rgb(182, 255, 0)">load 3ds</a>
+
+	<script id="vshader" type="x-shader/x-vertex">
 		precision highp float;
 		uniform mat4 modelViewMatrix;
 		uniform mat4 projectionMatrix;
@@ -882,7 +868,7 @@
 		}
 	</script>
 
-<script id="fshader" type="x-shader/x-fragment">
+	<script id="fshader" type="x-shader/x-fragment">
 		precision highp float;
 		uniform sampler2D map;
 		varying vec2 vUv;
